@@ -67,6 +67,13 @@ Put your customizations in `~/.laptop.local`. Preferrably setup using [Homebrew 
     brew cask install google-chrome
     brew cask install rdio
 
+Themes
+-------------
+
+Check this resource out for iTerm2 themes: [http://iterm2colorschemes.com/](http://iterm2colorschemes.com/)
+
+And this one for Sublimt Text themes: [http://colorsublime.com/](http://colorsublime.com/)
+
 Dotfiles
 --------
 
