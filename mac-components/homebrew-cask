@@ -1,0 +1,32 @@
+fancy_echo "Installing Google Chrome ..."
+  brew cask install google-chrome
+
+fancy_echo "Installing Firefox ..."
+  brew cask install firefox
+
+fancy_echo "Installing HipChat ..."
+  brew cask install hipchat
+
+fancy_echo "Installing Sequel Pro ..."
+  brew cask install sequel-pro
+
+fancy_echo "Installing iTerm 2 ..."
+  brew cask install iterm2
+
+fancy_echo "Installing Cyberduck ..."
+  brew cask install cyberduck
+
+fancy_echo "Installing Skype ..."
+  brew cask install skype
+
+fancy_echo "Installing ImageOptim ..."
+  brew cask install imageoptim
+
+fancy_echo "Installing ImageAlpha ..."
+  brew cask install imagealpha
+
+fancy_echo "Installing NameChanger ..."
+  brew cask install namechanger
+
+fancy_echo "Installing FontPrep ..."
+  brew cask install fontprep

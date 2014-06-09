@@ -58,6 +58,9 @@ fi
 
 fancy_echo "Updating Homebrew formulas ..."
   brew update
+
+fancy_echo "Installing Cask ..."
+  brew install caskroom/cask/brew-cask
 ### end mac-components/homebrew
 
 fancy_echo "Installing git ..."
@@ -175,6 +178,40 @@ fancy_echo "Installing the heroku-config plugin to pull config variables locally
 fancy_echo "Installing GitHub CLI client ..."
   brew install hub
 ### end mac-components/github
+
+fancy_echo "Installing Google Chrome ..."
+  brew cask install google-chrome
+
+fancy_echo "Installing Firefox ..."
+  brew cask install firefox
+
+fancy_echo "Installing HipChat ..."
+  brew cask install hipchat
+
+fancy_echo "Installing Sequel Pro ..."
+  brew cask install sequel-pro
+
+fancy_echo "Installing iTerm 2 ..."
+  brew cask install iterm2
+
+fancy_echo "Installing Cyberduck ..."
+  brew cask install cyberduck
+
+fancy_echo "Installing Skype ..."
+  brew cask install skype
+
+fancy_echo "Installing ImageOptim ..."
+  brew cask install imageoptim
+
+fancy_echo "Installing ImageAlpha ..."
+  brew cask install imagealpha
+
+fancy_echo "Installing NameChanger ..."
+  brew cask install namechanger
+
+fancy_echo "Installing FontPrep ..."
+  brew cask install fontprep
+### end mac-components/homebrew-cask
 
 fancy_echo "Installing your personal additions from ~/.laptop.local ..."
   if [[ -f ~/.laptop.local ]]; then
