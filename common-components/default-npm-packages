@@ -1,0 +1,5 @@
+fancy_echo "Installing CoffeeScript ..."
+  npm install -g coffee-script
+
+fancy_echo "Installing Grunt ..."
+  npm install -g grunt-cli

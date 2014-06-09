@@ -1,29 +1,32 @@
+fancy_echo "Installing git ..."
+  brew install git
+
+fancy_echo "Installing MySQL ..."
+  brew install mysql
+  mkdir -p ~/Library/LaunchAgents
+  ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+  launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+
 fancy_echo "Installing Postgres, a good open source relational database ..."
   brew install postgres --no-python
 
 fancy_echo "Installing Redis, a good key-value database ..."
   brew install redis
 
-fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
-  brew install the_silver_searcher
-
-fancy_echo "Installing vim from Homebrew to get the latest version ..."
-  brew install vim
-
-fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
-  brew install ctags
-
-fancy_echo "Installing tmux, to save project state and switch between projects ..."
-  brew install tmux
-
-fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
-  brew install reattach-to-user-namespace
-
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
   brew install imagemagick
 
-fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew install qt
+fancy_echo "Installing node.js ..."
+  brew install node
+
+fancy_echo "Installing PHP 5.5, see http://php-osx.liip.ch/ for help ..."
+  curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
+
+fancy_echo "Installing wget ..."
+  brew install wget
+
+fancy_echo "Installing ssh-copy-id ..."
+  brew install ssh-copy-id
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   brew install watch

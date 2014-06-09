@@ -57,8 +57,17 @@ else
 fi
 
 fancy_echo "Updating Homebrew formulas ..."
-brew update
+  brew update
 ### end mac-components/homebrew
+
+fancy_echo "Installing git ..."
+  brew install git
+
+fancy_echo "Installing MySQL ..."
+  brew install mysql
+  mkdir -p ~/Library/LaunchAgents
+  ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+  launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 fancy_echo "Installing Postgres, a good open source relational database ..."
   brew install postgres --no-python
@@ -66,26 +75,20 @@ fancy_echo "Installing Postgres, a good open source relational database ..."
 fancy_echo "Installing Redis, a good key-value database ..."
   brew install redis
 
-fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
-  brew install the_silver_searcher
-
-fancy_echo "Installing vim from Homebrew to get the latest version ..."
-  brew install vim
-
-fancy_echo "Installing ctags, to index files for vim tab completion of methods, classes, variables ..."
-  brew install ctags
-
-fancy_echo "Installing tmux, to save project state and switch between projects ..."
-  brew install tmux
-
-fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion compatibility with tmux ..."
-  brew install reattach-to-user-namespace
-
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
   brew install imagemagick
 
-fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  brew install qt
+fancy_echo "Installing node.js ..."
+  brew install node
+
+fancy_echo "Installing PHP 5.5, see http://php-osx.liip.ch/ for help ..."
+  curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
+
+fancy_echo "Installing wget ..."
+  brew install wget
+
+fancy_echo "Installing ssh-copy-id ..."
+  brew install ssh-copy-id
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   brew install watch
@@ -93,6 +96,9 @@ fancy_echo "Installing watch, to execute a program periodically and show the out
 
 fancy_echo "Starting Postgres ..."
   brew services restart postgresql
+
+fancy_echo "Starting MySQL ..."
+  brew services restart mysql
 ### end mac-components/start-services
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
@@ -145,9 +151,19 @@ fancy_echo "Configuring Bundler for faster, parallel gem installation ..."
   bundle config --global jobs $((number_of_cores - 1))
 ### end mac-components/bundler
 
-fancy_echo "Installing Suspenders, thoughtbot's Rails template ..."
-  gem install suspenders --no-document
+fancy_echo "Installing Rails ..."
+  gem install rails --no-document
+
+fancy_echo "Installing SASS ..."
+  gem install sass --no-document
 ### end common-components/default-gems
+
+fancy_echo "Installing CoffeeScript ..."
+  npm install -g coffee-script
+
+fancy_echo "Installing Grunt ..."
+  npm install -g grunt-cli
+### end common-components/default-npm-packages
 
 fancy_echo "Installing Heroku CLI client ..."
   brew install heroku-toolbelt
@@ -159,15 +175,6 @@ fancy_echo "Installing the heroku-config plugin to pull config variables locally
 fancy_echo "Installing GitHub CLI client ..."
   brew install hub
 ### end mac-components/github
-
-if ! command -v rcup &>/dev/null; then
-  fancy_echo "Installing rcm, to manage your dotfiles ..."
-    brew tap thoughtbot/formulae
-    brew install rcm
-else
-  fancy_echo "rcm already installed. Skipping ..."
-fi
-### end mac-components/rcm
 
 fancy_echo "Installing your personal additions from ~/.laptop.local ..."
   if [[ -f ~/.laptop.local ]]; then
