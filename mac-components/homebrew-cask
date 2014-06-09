@@ -10,6 +10,9 @@ fancy_echo "Installing HipChat ..."
 fancy_echo "Installing Sequel Pro ..."
   brew cask install sequel-pro
 
+fancy_echo "Installing Sublime Text ..."
+  brew cask install sublime-text
+
 fancy_echo "Installing iTerm 2 ..."
   brew cask install iterm2
 
