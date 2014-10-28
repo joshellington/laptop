@@ -1,7 +1,7 @@
 Laptop
 ======
 
-Laptop is a script to set up a Mac OS X laptop for development at Roundhouse.
+Laptop is a script to set up a Mac OS X laptop for development.
 
 Requirements
 ------------
@@ -24,7 +24,7 @@ Install
 
 Read, then run the script:
 
-    bash <(curl -s https://raw.githubusercontent.com/roundhouse/laptop/master/mac)
+    bash <(curl -s https://raw.githubusercontent.com/joshellington/laptop/master/mac)
 
 What it sets up
 ---------------
