@@ -97,6 +97,8 @@ fancy_echo "Installing watch, to execute a program periodically and show the out
   brew install watch
 ### end mac-components/packages
 
+brew tap homebrew/services
+
 fancy_echo "Starting Postgres ..."
   brew services restart postgresql
 

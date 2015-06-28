@@ -1,3 +1,5 @@
+brew tap homebrew/services
+
 fancy_echo "Starting Postgres ..."
   brew services restart postgresql
 
