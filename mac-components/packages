@@ -19,8 +19,8 @@ fancy_echo "Installing ImageMagick, to crop and resize images ..."
 fancy_echo "Installing node.js ..."
   brew install node
 
-fancy_echo "Installing PHP 5.5, see http://php-osx.liip.ch/ for help ..."
-  curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
+fancy_echo "Installing PHP 5.6, see http://php-osx.liip.ch/ for help ..."
+  curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
 
 fancy_echo "Installing wget ..."
   brew install wget

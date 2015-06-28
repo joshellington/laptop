@@ -7,6 +7,9 @@ fancy_echo "Installing Firefox ..."
 fancy_echo "Installing HipChat ..."
   brew cask install hipchat
 
+  fancy_echo "Installing Slack ..."
+  brew cask install slack
+
 fancy_echo "Installing Sequel Pro ..."
   brew cask install sequel-pro
 
@@ -27,9 +30,6 @@ fancy_echo "Installing ImageOptim ..."
 
 fancy_echo "Installing ImageAlpha ..."
   brew cask install imagealpha
-
-fancy_echo "Installing NameChanger ..."
-  brew cask install namechanger
 
 fancy_echo "Installing FontPrep ..."
   brew cask install fontprep
